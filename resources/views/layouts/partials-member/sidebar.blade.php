@@ -28,21 +28,21 @@
                 </li>
 
                 <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="user/pembeli/create"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pembeli/create"
                         aria-expanded="false">
 
                         <span class="hide-menu">Pesan Tiket</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="user/booking/create"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="booking/create"
                         aria-expanded="false">
 
                         <span class="hide-menu">Booking</span>
                     </a>
                 </li>
                 <li class="sidebar-item pt-2">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pembeli/create"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
                         aria-expanded="false">
 
                         <span class="hide-menu">Data Kereta</span>

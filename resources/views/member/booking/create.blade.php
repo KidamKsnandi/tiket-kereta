@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.member')
 
 @section('header')
     <h4 class="page-title">Booking</h4>
