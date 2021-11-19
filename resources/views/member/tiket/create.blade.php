@@ -57,8 +57,9 @@
                                 </span>
                             @enderror
                         </div>
+                        <div class="row g-3">
+                              <div class="col">
                         <div class="form-group">
-                            <label for="">Dari</label>
                             <select name="dari" class="form-control @error('dari') is-invalid @enderror" >
                                     <option value="">Dari</option>
                                     <option value="Bandung">Bandung</option>
@@ -78,8 +79,9 @@
                                 </span>
                             @enderror
                         </div>
+                              </div>
+                                <div class="col">
                         <div class="form-group">
-                            <label for="">Ke</label>
                             <select name="ke" class="form-control @error('ke') is-invalid @enderror" >
                                     <option value="">Ke</option>
                                     <option value="Bandung">Bandung</option>
@@ -99,9 +101,11 @@
                                 </span>
                             @enderror
                         </div>
+                                </div>
+                        </div>
                         <div class="form-group">
-                            <button type="reset" class="btn btn-outline-warning">Reset</button>
-                            <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                            <button type="reset" class="btn btn-danger text-white">Reset</button>
+                            <button type="submit" class="btn btn-info text-white">Simpan</button>
                         </div>
                    </form>
                 </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Kasir;
+use App\Models\Pembeli;
 use Illuminate\Http\Request;
 
 class KasirController extends Controller
@@ -14,72 +16,7 @@ class KasirController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Kasir  $kasir
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Kasir $kasir)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Kasir  $kasir
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Kasir $kasir)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Kasir  $kasir
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Kasir $kasir)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Kasir  $kasir
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Kasir $kasir)
-    {
-        //
+        $kasir = Kasir::with('booking')->get();
+        return view('member.transaksi.index', compact('kasir'));
     }
 }

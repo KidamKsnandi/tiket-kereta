@@ -16,7 +16,7 @@
                 <span class="logo-text">
                     <!-- dark Logo text -->
                     <b>
-                        <span class="text-dark">ADMIN</span>
+                        <span class="text-dark">PETUGAS</span>
                         <span class="text-info">Kereta</span>
                     </b>
                 </span>

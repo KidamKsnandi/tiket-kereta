@@ -4,6 +4,6 @@
 @endsection
 
 @section('content')
-    <h1>Isi didie nu tampilan pembelina bar</h1>
+
 @endsection
 

@@ -1,4 +1,4 @@
-@extends('layouts.member')
+@extends('layouts.main')
 @section('header')
 <div class="content-header">
     <div class="container-fluid">

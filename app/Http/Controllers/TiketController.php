@@ -44,11 +44,12 @@ class TiketController extends Controller
         $tiket->ke = $request->ke;
         $tiket->save();
         return redirect()->route('tiket.index');
-
     }
 
-    public function destroy(Tiket $tiket)
+    public function destroy($id)
     {
-        //
+        $tiket = Tiket::findOrFail($id);
+        $tiket->delete();
+        return redirect()->route('tiket.index');
     }
 }

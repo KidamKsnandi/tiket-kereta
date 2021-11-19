@@ -18,7 +18,6 @@ class CreateKeretaTable extends Migration
             $table->string('nama_kereta');
             $table->string('jm_berangkat');
             $table->string('jm_tiba');
-            $table->integer('harga')->unsigned();
             $table->timestamps();
         });
     }

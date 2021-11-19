@@ -9,8 +9,8 @@ class Kelas extends Model
 {
     use HasFactory;
 
-    protected $visible = ['nama_kelas','harga'];
-    protected $fillable = ['nama_kelas','harga'];
+    protected $visible = ['nama_kelas'];
+    protected $fillable = ['nama_kelas'];
     public $timestamps = true;
 
     public function pembeli() {

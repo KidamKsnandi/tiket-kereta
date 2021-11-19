@@ -17,12 +17,12 @@ class CreateKasirTable extends Migration
             $table->id();
             $table->bigInteger('id_booking')->unsigned();
             $table->string('nama_kasir');
-            $table->bigInteger('id_pembeli')->unsigned();
+            $table->integer('jumlah')->unsigned();
+            $table->integer('harga')->unsigned();
             $table->integer('total_harga')->unsigned();
             $table->integer('uang')->unsigned();
             $table->integer('kembalian')->unsigned();
             $table->foreign('id_booking')->references('id')->on('booking');
-            $table->foreign('id_pembeli')->references('id')->on('pembeli');
             $table->timestamps();
         });
     }

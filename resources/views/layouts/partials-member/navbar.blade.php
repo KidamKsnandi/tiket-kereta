@@ -1,11 +1,13 @@
 <header class="topbar" data-navbarbg="skin5">
-    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark bg-dark">
         <div class="navbar-header" data-logobg="skin5">
 
-<h2 class="logo-icon" style="padding-left: 30px;">
+<h2 style="padding-left: 30px;">
             <a href="/home">
                 <b>
-                <span class="text-white">Tiket</span><span class="text-info"> Kereta</span>
+                    <div class="row">
+                <span class="text-white col-sm-5">Tiket</span><span class="text-info col-sm-4"> Kereta</span>
+                </div>
             </b>
             </a>
         </h2>
@@ -31,6 +33,9 @@
             <!-- Right side toggle and nav items -->
             <!-- ============================================================== -->
             <ul class="navbar-nav ms-auto d-flex align-items-center">
+                <li style="padding-right: 20px;">
+                    <a href="transaksi" class="btn btn-success text-white">Lihat Transaksi</a>
+                </li>
 
                 <!-- ============================================================== -->
                 <!-- Search -->

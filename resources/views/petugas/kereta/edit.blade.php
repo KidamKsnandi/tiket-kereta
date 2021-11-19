@@ -1,7 +1,14 @@
-@extends('layouts.member')
-
+@extends('layouts.petugas')
 @section('header')
-    <h4 class="page-title">Booking</h4>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h4 class="m-0">Edit Data Kereta</h4>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('content')
@@ -9,37 +16,33 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Masukkan Data Pembeli untuk pesan tiket</div>
+                <div class="card-header">Data Kereta</div>
                 <div class="card-body">
-                   <form action="{{route('booking.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('kereta.update', $kereta->id) }}" method="POST">
                         @csrf
-
+                        @method('put')
                         <div class="form-group">
-                            <label for="">kode Booking </label>
-                            <select style="text-transform: uppercase;" name="id_tiket" class="form-control @error('id_tiket') is-invalid @enderror" >
-                                @foreach($tiket as $data)
-                                    <option style="text-transform: uppercase;" value="{{$data->id}}">{{$data->kode_booking}}</option>
-                                @endforeach
-                            </select>
-                            @error('id_tiket')
+                            <label for="">Nama Kereta</label>
+                            <input type="text" name="nama_kereta" value="{{ $kereta->nama_kereta }}" class="form-control @error('nama_kereta') is-invalid @enderror">
+                            @error('nama_kereta')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Tanggal Berangkat</label>
-                            <input type="date" name="tgl_berangkat" class="form-control @error('tgl_berangkat') is-invalid @enderror">
-                             @error('tgl_berangkat')
+                            <label for="">Jam Berangkat</label>
+                            <input type="text" name="jm_berangkat" value="{{ $kereta->jm_berangkat }}" class="form-control @error('jm_berangkat') is-invalid @enderror">
+                            @error('jm_berangkat')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Tanggal Pemesanan</label>
-                            <input type="date" name="tgl_pemesanan" class="form-control @error('tgl_pemesanan') is-invalid @enderror">
-                             @error('tgl_pemesanan')
+                            <label for="">Jam Tiba</label>
+                            <input type="text" name="jm_tiba" value="{{ $kereta->jm_tiba }}" class="form-control @error('jm_tiba') is-invalid @enderror">
+                            @error('jm_tiba')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -49,7 +52,7 @@
                             <button type="reset" class="btn btn-danger text-white">Reset</button>
                             <button type="submit" class="btn btn-info text-white">Simpan</button>
                         </div>
-                   </form>
+                    </form>
                 </div>
             </div>
         </div>
